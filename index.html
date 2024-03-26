@@ -44,53 +44,56 @@
       width: 100%;
       max-height: 80vh;
       overflow-y: auto;
-    
     }
     
     .return-button {
       margin-top: 20px;
       font-size: 18px;
     }
+    
+    .close-button {
+      width: 100%;
+    }
   </style>
-  </head>
-  <body>
-    <div class="search-container">
-      <input type="text" id="searchBar" class="search-bar" placeholder="Enter File Name">
-      <button class="search-button" onclick="searchFile()">Search</button>
-      <button class="return-button">Return to Previous</button>
+</head>
+<body>
+  <div class="search-container">
+    <input type="text" id="searchBar" class="search-bar" placeholder="Enter File Name">
+    <button class="search-button" onclick="searchFile()">Search</button>
+    <button class="return-button">Return to Previous</button>
+  </div>
+
+  <div id="popupContainer" class="popup-container">
+    <div class="popup-content">
+      <div id="popupContent"></div>
+      <button class="close-button" onclick="closePopup()">Close</button>
     </div>
+  </div>
 
-    <div id="popupContainer" class="popup-container">
-      <div class="popup-content">
-        <div id="popupContent"></div>
-        <button class="close-button" onclick="closePopup()">Close</button>
-      </div>
-    </div>
+  <script>
+    function searchFile() {
+      var fileName = document.getElementById("searchBar").value;
 
-    <script>
-      function searchFile() {
-        var fileName = document.getElementById("searchBar").value;
-
-        var xhr = new XMLHttpRequest();
-        xhr.onreadystatechange = function() {
-          if (xhr.readyState === XMLHttpRequest.DONE) {
-            if (xhr.status === 200) {
-              var fileContent = xhr.responseText;
-              document.getElementById("popupContent").innerHTML = fileContent;
-              document.getElementById("popupContainer").style.display = "flex";
-            } else {
-              alert("Error: File not found.");
-            }
+      var xhr = new XMLHttpRequest();
+      xhr.onreadystatechange = function() {
+        if (xhr.readyState === XMLHttpRequest.DONE) {
+          if (xhr.status === 200) {
+            var fileContent = xhr.responseText;
+            document.getElementById("popupContent").innerHTML = fileContent;
+            document.getElementById("popupContainer").style.display = "flex";
+          } else {
+            alert("Error: File not found.");
           }
-        };
+        }
+      };
 
-        xhr.open("GET", "victorum/" + fileName, true);
-        xhr.send();
-      }
+      xhr.open("GET", "victorum/" + fileName, true);
+      xhr.send();
+    }
 
-      function closePopup() {
-        document.getElementById("popupContainer").style.display = "none";
-      }
-    </script>
-  </body>
+    function closePopup() {
+      document.getElementById("popupContainer").style.display = "none";
+    }
+  </script>
+</body>
 </html>
