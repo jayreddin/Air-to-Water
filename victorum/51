@@ -1,0 +1,55 @@
+
+  <!DOCTYPE html>
+  <html>
+  <head>
+      <meta charset="utf-8">
+      <title>Error 10</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="description" />
+  </head>
+  <style>
+
+  p.solid {border-style: solid;
+  border: 5px solid black;
+  border-radius: 20px;
+  padding: 5px; }
+
+        .container {
+            text-align: center;
+            border: 1px solid black;
+            padding: 20px;
+            width: 50%;
+            margin: 0 auto;
+        }
+        h1 {
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+            text-decoration-line: underline;
+        }
+        p {
+            text-align: center;
+        }
+    </style>
+
+  <body>
+      <h1>   Error 51   </h1>
+      <p class="solid"> 
+
+Air In sensor error
+
+
+
+<br> 
+
+
+Check sensor. Replace if necessary
+
+
+</p>
+
+
+
+
+  </body>
+  </html>
