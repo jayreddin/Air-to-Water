@@ -15,7 +15,7 @@
     .search-bar {
       height: 100px;
       width: 400px;
-      font-size: 24px;
+      font-size: 50px;
       text-align: center;
     }
     
@@ -58,9 +58,9 @@
 </head>
 <body>
   <div class="search-container">
-    <input type="text" id="searchBar" class="search-bar" placeholder="Enter File Name">
+    <input type="text" id="searchBar" class="search-bar" placeholder="Enter Error Code">
     <button class="search-button" onclick="searchFile()">Search</button>
-    <button class="return-button">Return to Previous</button>
+    <button class="return-button" onclick="goToIndex()">Return to Previous</button>
   </div>
 
   <div id="popupContainer" class="popup-container">
@@ -93,6 +93,10 @@
 
     function closePopup() {
       document.getElementById("popupContainer").style.display = "none";
+    }
+
+    function goToIndex() {
+      window.location.href = "index.html";
     }
   </script>
 </body>
