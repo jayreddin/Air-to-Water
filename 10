@@ -1,0 +1,43 @@
+
+  <!DOCTYPE html>
+  <html>
+  <head>
+      <meta charset="utf-8">
+      <title>Error 10</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="description" />
+  </head>
+  <style>
+  
+  p.solid {border-style: solid;
+  border: 2px solid black;
+  border-radius: 5px;
+  padding: 5px; }
+  
+        .container {
+            text-align: center;
+            border: 1px solid black;
+            padding: 20px;
+            width: 50%;
+            margin: 0 auto;
+        }
+        h1 {
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+            text-decoration-line: underline;
+        }
+        p {
+            text-align: center;
+        }
+    </style>
+  
+  <body>
+      <h1>   Error 10   </h1>
+      <p class="solid"> Water Pressure low (Under 0.8bar) <br> Increase water pressure</p>
+     
+      
+   
+      
+  </body>
+  </html>
